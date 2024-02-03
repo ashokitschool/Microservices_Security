@@ -1,0 +1,17 @@
+server:
+  port: 3333
+  
+spring:
+  application:
+    name: API-Gateway
+    
+  cloud:
+    gateway:
+      routes:
+      - id: welcome-api
+        uri: lb://welcome
+        predicates:
+        - Path=/msg
+        filters:
+        - AuthenticationFilter
+                

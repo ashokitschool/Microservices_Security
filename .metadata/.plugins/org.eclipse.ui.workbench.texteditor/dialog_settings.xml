@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="validator"/>
+		<list key="findhistory">
+			<item value="Validator"/>
+			<item value="validator"/>
+			<item value="config"/>
+			<item value="Config"/>
+		</list>
+	</section>
+</section>

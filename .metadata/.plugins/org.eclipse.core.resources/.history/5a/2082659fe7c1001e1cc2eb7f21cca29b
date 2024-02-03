@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: AUTH-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/iesdevdb
+    username: ashokit
+    password: AshokIT@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    
+server:
+  port: 9091
+  
+  

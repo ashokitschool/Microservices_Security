@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="org.eclipse.buildship:3.1.7.v20230428-1350"/>
+		<item value="org.eclipse.egit.gitflow.feature:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.egit:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.emf.common:2.29.0.v20230315-1321"/>
+		<item value="org.eclipse.emf.ecore:2.32.0.v20230406-1203"/>
+		<item value="org.eclipse.epp.mpc:1.10.1.v20221110-1841"/>
+		<item value="org.eclipse.help:2.3.1400.v20230605-0440"/>
+		<item value="org.eclipse.jdt:3.19.100.v20230605-0440"/>
+		<item value="org.eclipse.jgit.gpg.bc:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit.http.apache:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit.lfs:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit.ssh.apache:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jgit:6.6.0.202305301015-r"/>
+		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.29.0.v202301170743"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:17.0.7.v20230425-1502"/>
+		<item value="org.eclipse.m2e.feature:2.3.0.20230523-2033"/>
+		<item value="org.eclipse.m2e.logback.feature:2.1.2.20230523-2106"/>
+		<item value="org.eclipse.m2e.wtp.feature:1.6.0.20230118-0812"/>
+		<item value="org.eclipse.mylyn.wikitext.editors_feature:3.0.46.202301111837"/>
+		<item value="org.eclipse.pde:3.15.0.v20230605-0440"/>
+		<item value="org.eclipse.platform:4.28.0.v20230605-0440"/>
+		<item value="org.eclipse.rcp:4.28.0.v20230605-0440"/>
+		<item value="org.eclipse.tm.terminal.connector.ssh.feature:11.2.0.202303140100"/>
+		<item value="org.eclipse.tm.terminal.control.feature:11.2.0.202303140100"/>
+		<item value="org.eclipse.tm.terminal.feature:11.2.0.202303131754"/>
+		<item value="org.eclipse.tm.terminal.view.feature:11.2.0.202304132101"/>
+		<item value="org.eclipse.userstorage:1.2.0.v20210517-0327"/>
+		<item value="org.eclipse.wst.common.fproj:3.7.4.v202303031844"/>
+		<item value="org.jboss.tools.m2e.wro4j.feature:1.2.1.202301111328"/>
+		<item value="org.sonatype.m2e.egit.feature:0.17.0.202209271423"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="828"/>
+		<item key="DIALOG_HEIGHT" value="482"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

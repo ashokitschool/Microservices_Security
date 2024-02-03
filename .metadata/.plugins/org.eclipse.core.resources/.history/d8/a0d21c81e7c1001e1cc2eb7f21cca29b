@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: AUTH-SERVICE
+  datasource:
+    url: 
+    username: 
+    password: 
+    
+server:
+  port: 9091
+  
+  

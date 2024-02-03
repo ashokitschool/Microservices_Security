@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: AUTH-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/iesdevdb
+    username: ashokit
+    password: AshokIT@123
+    
+server:
+  port: 9091
+  
+  

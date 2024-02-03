@@ -1,0 +1,8 @@
+package in.ashokit.binding;
+
+public class AuthRequest {
+	
+	  private String username;
+	    private String password;
+
+}

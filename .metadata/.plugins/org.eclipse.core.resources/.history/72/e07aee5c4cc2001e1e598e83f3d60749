@@ -1,0 +1,8 @@
+server:
+  port: 2244
+  
+spring:
+  config:
+    import: optional:configserver:http://localhost:1111
+  application:
+    name: welcome
