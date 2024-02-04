@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import in.ashokit.binding.AuthRequest;
+import in.ashokit.binding.AuthResponse;
 import in.ashokit.entity.UserCredential;
 import in.ashokit.service.AuthService;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin
 public class AuthController {
 	@Autowired
 	private AuthService service;
@@ -30,13 +33,26 @@ public class AuthController {
 	}
 
 	@PostMapping("/token")
-	public String getToken(@RequestBody AuthRequest authRequest) {
-		Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-		if (authenticate.isAuthenticated()) {
-			return service.generateToken(authRequest.getUsername());
-		} else {
-			throw new RuntimeException("invalid access");
+	public AuthResponse getToken(@RequestBody AuthRequest authRequest) {
+
+		AuthResponse response = new AuthResponse();
+
+		try {
+			Authentication authenticate = authenticationManager.authenticate(
+					new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+			String token = null;
+
+			if (authenticate.isAuthenticated()) {
+				token = service.generateToken(authRequest.getUsername());
+				response.setToken(token);
+				response.setLoginValid("yes");
+			}
+		} catch (Exception e) {
+			response.setToken("");
+			response.setLoginValid("no");
 		}
+
+		return response;
 	}
 
 	@GetMapping("/validate")

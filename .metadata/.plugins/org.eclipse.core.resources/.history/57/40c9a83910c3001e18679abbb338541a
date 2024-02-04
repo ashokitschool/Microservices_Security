@@ -1,0 +1,36 @@
+server:
+  port: 5555
+  
+spring:
+  application:
+    name: API-Gateway
+    
+  cloud:
+    gateway:
+      routes:
+      - id: welcome-api
+        uri: lb://WELCOME
+        predicates:
+        - Path=/welcome
+        filters:
+        - AuthenticationFilter
+        metadata:
+          cors: 
+            allowedOrigins: '*'
+            allowedHeaders: '*'
+            maxAge: 30
+        
+      - id: greet-api
+        uri: lb://GREET
+        predicates:
+        - Path=/greet
+        filters:
+        - AuthenticationFilter
+        
+      - id: authentication-api
+        uri: lb://AUTH-SERVICE
+        predicates:
+        - Path=/auth/**
+        
+  main:
+    web-application-type: reactive

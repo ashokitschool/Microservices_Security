@@ -11,9 +11,14 @@ spring:
       - id: welcome-api
         uri: lb://WELCOME
         predicates:
-        - Path=/msg
+        - Path=/welcome
         filters:
         - AuthenticationFilter
+        metadata:
+          cors: 
+            allowedOrigins: '*'
+            allowedHeaders: '*'
+            maxAge: 30
         
       - id: greet-api
         uri: lb://GREET
@@ -21,8 +26,16 @@ spring:
         - Path=/greet
         filters:
         - AuthenticationFilter
+        metadata:
+          cors: 
+            allowedOrigins: '*'
+            allowedHeaders: '*'
+            maxAge: 30
         
       - id: authentication-api
         uri: lb://AUTH-SERVICE
         predicates:
         - Path=/auth/**
+        
+  main:
+    web-application-type: reactive

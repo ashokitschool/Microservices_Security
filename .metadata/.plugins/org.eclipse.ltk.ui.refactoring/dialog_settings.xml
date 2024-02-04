@@ -2,7 +2,7 @@
 <section name="Workbench">
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="790"/>
-		<item key="height" value="350"/>
+		<item key="height" value="340"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
