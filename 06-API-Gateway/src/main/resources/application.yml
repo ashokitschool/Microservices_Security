@@ -13,25 +13,13 @@ spring:
         predicates:
         - Path=/welcome
         filters:
-        - AuthenticationFilter
-        metadata:
-          cors: 
-            allowedOrigins: '*'
-            allowedHeaders: '*'
-            maxAge: 30
-        
+        - AuthenticationFilter        
       - id: greet-api
         uri: lb://GREET
         predicates:
         - Path=/greet
         filters:
-        - AuthenticationFilter
-        metadata:
-          cors: 
-            allowedOrigins: '*'
-            allowedHeaders: '*'
-            maxAge: 30
-        
+        - AuthenticationFilter      
       - id: authentication-api
         uri: lb://AUTH-SERVICE
         predicates:
